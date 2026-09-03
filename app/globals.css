@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@config "../tailwind.config.ts";
+
+:root {
+  --color-cream: #F7F1E8;
+  --color-espresso: #1C1410;
+  --color-pistachio: #7A9B76;
+  --color-blush: #E8C4B8;
+  --color-gold: #C4A574;
+  --color-white: #FFFFFF;
+  --color-espresso-muted: color-mix(in srgb, var(--color-espresso) 65%, transparent);
+  --font-geist: var(--font-inter);
+
+  --background: var(--color-cream);
+  --foreground: var(--color-espresso);
+  --primary: var(--color-pistachio);
+  --primary-foreground: var(--color-cream);
+  --card: var(--color-white);
+  --card-foreground: var(--color-espresso);
+  --border: color-mix(in srgb, var(--color-gold) 45%, transparent);
+  --ring: var(--color-pistachio);
+}
+
+@theme inline {
+  --color-cream: #F7F1E8;
+  --color-espresso: #1C1410;
+  --color-pistachio: #7A9B76;
+  --color-blush: #E8C4B8;
+  --color-gold: #C4A574;
+  --color-white: #FFFFFF;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-geist), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+html { background: var(--color-cream); color: var(--color-espresso); }
+
+body {
+  font-family: var(--font-geist), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-espresso);
+}
+
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
