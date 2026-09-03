@@ -18,6 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.arnoldo.at"),
   title: {
     default: "Gelateria Arnoldo — Italienische Eiskunst in Hernals",
     template: "%s · Gelateria Arnoldo",
