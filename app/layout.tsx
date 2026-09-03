@@ -24,7 +24,12 @@ export const metadata: Metadata = {
   },
   description:
     "Gelato naturale in Wien-Hernals. Täglich frisch, seit Generationen. Hernalser Hauptstraße 145.",
-  openGraph: { locale: "de_AT", type: "website", siteName: "Gelateria Arnoldo" },
+  openGraph: {
+    locale: "de_AT",
+    type: "website",
+    siteName: "Gelateria Arnoldo",
+    images: ["/images/hero.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

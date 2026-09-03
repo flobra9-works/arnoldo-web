@@ -4,6 +4,8 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { ContactDetails } from "@/components/kontakt/ContactDetails";
 import { ContactMap } from "@/components/kontakt/ContactMap";
 import { ContactForm } from "@/components/kontakt/ContactForm";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { localBusinessJsonLd } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -14,6 +16,7 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-16">
+      <JsonLd data={localBusinessJsonLd()} />
       <SectionLabel>Besuch & Gespräch</SectionLabel>
       <h1 className="mt-4 font-display text-4xl md:text-5xl">Kontakt</h1>
       <p className="mt-4 max-w-2xl text-lg text-espresso/65">
