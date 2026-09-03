@@ -5,7 +5,7 @@ export function StickyVisitBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold/40 bg-cream px-4 py-3 md:hidden pb-[max(0.75rem,env(safe-area-inset-bottom))]">
       <div className="flex items-center justify-between gap-3">
-        <p className="text-xs text-espresso/65">Heute {site.hours.display}</p>
+        <p className="text-xs text-espresso/65">{site.hours.todayShort}</p>
         <div className="flex gap-2">
           <a
             data-cta="anrufen"

@@ -13,7 +13,7 @@ export type SiteContent = {
   geo: { lat: number; lng: number };
   phone: { display: string; tel: string };
   email: string;
-  hours: { display: string; openingHours: string[] };
+  hours: { display: string; todayShort: string; openingHours: string[] };
   nav: NavItem[];
   legal: {
     company: string;
@@ -40,6 +40,7 @@ export const site: SiteContent = {
   email: "gelateria@arnoldo.at",
   hours: {
     display: "Mo–So 12:00–22:00",
+    todayShort: "Heute bis 22:00",
     openingHours: ["Mo-Su 12:00-22:00"],
   },
   nav: [
