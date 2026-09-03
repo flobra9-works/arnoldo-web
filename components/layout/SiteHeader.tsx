@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { site } from "@/content/site";
 import { mapsSearchUrl } from "@/lib/maps";
+import { Button } from "@/components/ui/button";
 import { NavLinks } from "./NavLinks";
 
 export function SiteHeader() {
@@ -19,15 +20,11 @@ export function SiteHeader() {
         <NavLinks items={site.nav} />
         <div className="flex items-center gap-4">
           <p className="hidden text-sm text-espresso/65 lg:block">{site.hours.display}</p>
-          <a
-            data-cta="anfahrt"
-            href={mapsSearchUrl()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center rounded-full bg-pistachio px-5 text-sm font-medium text-cream hover:bg-pistachio/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-pistachio focus-visible:ring-offset-2 focus-visible:ring-offset-cream"
-          >
-            Anfahrt
-          </a>
+          <Button asChild data-cta="anfahrt">
+            <a href={mapsSearchUrl()} target="_blank" rel="noopener noreferrer">
+              Anfahrt
+            </a>
+          </Button>
         </div>
       </div>
     </header>
