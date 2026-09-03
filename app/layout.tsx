@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import { SiteHeader } from "@/components/layout/SiteHeader";
+import { SiteFooter } from "@/components/layout/SiteFooter";
+import { StickyVisitBar } from "@/components/layout/StickyVisitBar";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -27,8 +30,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${fraunces.variable} ${inter.variable}`}>
-      <body className="min-h-dvh bg-cream text-espresso antialiased">
+      <body className="min-h-dvh bg-cream text-espresso antialiased pb-16 md:pb-0">
+        <SiteHeader />
         {children}
+        <SiteFooter />
+        <StickyVisitBar />
       </body>
     </html>
   );
