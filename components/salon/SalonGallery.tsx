@@ -1,3 +1,5 @@
+import { withBase } from "@/lib/paths";
+
 export type GalleryShot = { src: string; alt: string; caption?: string };
 
 export function SalonGallery({ shots }: { shots: GalleryShot[] }) {
@@ -8,7 +10,7 @@ export function SalonGallery({ shots }: { shots: GalleryShot[] }) {
           <li key={shot.src} className={i === 0 ? "md:col-span-2" : ""}>
             <figure>
               <img
-                src={shot.src}
+                src={withBase(shot.src)}
                 alt={shot.alt}
                 className="h-72 w-full rounded-2xl object-cover md:h-96"
               />

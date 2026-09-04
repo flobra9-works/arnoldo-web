@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { withBase } from "@/lib/paths";
 
 export function Hero() {
   return (
     <section className="relative min-h-[80dvh] overflow-hidden">
       <img
-        src="/images/hero.jpg"
+        src={withBase("/images/hero.jpg")}
         alt="Handwerklich gezogenes Gelato im Salon Arnoldo"
         className="animate-hero absolute inset-0 h-full w-full object-cover"
       />
@@ -25,7 +27,7 @@ export function Hero() {
             data-cta="eissorten-entdecken"
             className="border-cream text-cream hover:bg-cream/10"
           >
-            <a href="/eissorten">Eissorten entdecken</a>
+            <Link href="/eissorten">Eissorten entdecken</Link>
           </Button>
         </div>
       </div>

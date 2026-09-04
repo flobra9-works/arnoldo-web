@@ -17,8 +17,14 @@ const inter = Inter({
   display: "swap",
 });
 
+const isGithubPages = process.env.GITHUB_PAGES === "true";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const metadataBase = isGithubPages
+  ? new URL(`https://flobra9-works.github.io${basePath}`)
+  : new URL("https://www.arnoldo.at");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arnoldo.at"),
+  metadataBase,
   title: {
     default: "Gelateria Arnoldo — Italienische Eiskunst in Hernals",
     template: "%s · Gelateria Arnoldo",

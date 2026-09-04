@@ -36,3 +36,9 @@ Placeholder images ship in public/images/. Client shot list: public/images/READM
 ## Deploy
 
 Connect this GitHub repo to Vercel, production branch main, framework preset Next.js. Custom domain www.arnoldo.at is a later DNS cutover.
+
+## GitHub Pages
+
+Static preview: https://flobra9-works.github.io/arnoldo-web/
+
+Built with GITHUB_PAGES=true (sets basePath /arnoldo-web) and deployed via .github/workflows/deploy-pages.yml on every push to main.

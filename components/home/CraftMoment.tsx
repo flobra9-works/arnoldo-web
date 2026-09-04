@@ -1,4 +1,5 @@
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { withBase } from "@/lib/paths";
 
 export function CraftMoment() {
   return (
@@ -14,7 +15,7 @@ export function CraftMoment() {
           </p>
         </div>
         <img
-          src="/images/craft.jpg"
+          src={withBase("/images/craft.jpg")}
           alt="Frische Zutaten und Hände bei der Gelato-Zubereitung"
           className="h-full min-h-72 w-full rounded-2xl object-cover"
         />

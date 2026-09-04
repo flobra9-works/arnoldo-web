@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { withBase } from "@/lib/paths";
 import type { Flavor } from "@/content/flavors";
 
 export function FlavorCard({
@@ -17,7 +18,7 @@ export function FlavorCard({
     >
       <div className={cn("relative bg-blush/40", size === "hero" ? "aspect-[4/5]" : "aspect-square")}>
         <img
-          src={flavor.image}
+          src={withBase(flavor.image)}
           alt={`Gelato ${flavor.name}`}
           className="h-full w-full object-cover"
         />

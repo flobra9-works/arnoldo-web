@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import { withBase } from "@/lib/paths";
 
 export function SalonTease() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-20">
       <div className="grid items-center gap-10 md:grid-cols-2">
         <img
-          src="/images/salon/interior.jpg"
+          src={withBase("/images/salon/interior.jpg")}
           alt="Warmer Innenraum des Salons Arnoldo in Hernals"
           className="min-h-72 w-full rounded-2xl object-cover"
         />
